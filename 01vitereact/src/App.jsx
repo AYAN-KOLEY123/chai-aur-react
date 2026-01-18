@@ -1,5 +1,11 @@
 import Chai from "./chai";
 function App() {
-  return <Chai />;
+  return (
+    <>
+      <Chai />
+      <h1>Chai Aur React</h1>
+      <p>Test Para</p>
+    </>
+  );
 }
 export default App;
