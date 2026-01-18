@@ -1,4 +1,5 @@
+import Chai from "./chai";
 function App() {
-  return <chai />;
+  return <Chai />;
 }
 export default App;
