@@ -1,9 +1,8 @@
-import chai from "./chai";
+import Chai from "./chai";
 function App() {
   return (
     <>
-      <chai />
-      <h1>Chai Aur React | AYAN KOLEY</h1>
+      <Chai />
     </>
   );
 }
