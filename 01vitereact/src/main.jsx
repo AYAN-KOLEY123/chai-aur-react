@@ -23,9 +23,9 @@ function MyApp() {
 //   </a>
 // );
 
-const reactElement = React.createElement(
-  "a",
-  { href: "https://google.com", target: "_blank" },
-  "Click me to visit google",
-);
-createRoot(document.getElementById("root")).render(reactElement);
+// const reactElement = React.createElement(
+//   "a",
+//   { href: "https://google.com", target: "_blank" },
+//   "Click me to visit google",
+// );
+createRoot(document.getElementById("root")).render(<App />);
