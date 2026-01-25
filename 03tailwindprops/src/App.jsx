@@ -8,7 +8,9 @@ function App() {
 
   return (
     <>
-      <h1 className="bg-green-400">Tailwind Test</h1>
+      <h1 className="bg-green-400 text-black p-4 rounded-b-4xl">
+        Tailwind Test
+      </h1>
     </>
   );
 }
