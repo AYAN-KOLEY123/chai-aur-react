@@ -1,6 +1,7 @@
 import React from "react";
 
-function Card() {
+function Card({ username, date = "27/01/2026" }) {
+  console.log(username, date);
   return (
     <div className="w-60 flex flex-col rounded-xl bg-black min-h-76 mb-4">
       <div>
@@ -12,11 +13,11 @@ function Card() {
       </div>
       <div className="flex flex-col py-3 px-3 pb-10">
         <div className="flex justify-between ">
-          <h1 className="font-bold ">Bored ape nft accidental</h1>
+          <h1 className="font-bold ">{username}</h1>
           <h1>Price</h1>
         </div>
         <div className="flex  justify-between">
-          <p>#345</p>
+          <p>{date}</p>
           <p>0.01</p>
         </div>
       </div>
