@@ -11,6 +11,9 @@ function App() {
     //console.log("Clicked", counter);
     if (counter < 20) {
       setCounter(counter + 1);
+      setCounter(counter + 1);
+      setCounter(counter + 1);
+      setCounter(counter + 1);
     }
   };
   const removeValue = () => {
