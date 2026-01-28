@@ -34,61 +34,63 @@ function App() {
 
   return (
     <>
-      <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 text-orange-500 bg-gray-800">
-        <h1 className="text-white text-center text-2xl my-3">
-          Password Generator
-        </h1>
-        <div className="flex shadow rounded-lg overflow-hidden mb-4 bg-white">
-          <input
-            type="text"
-            value={password}
-            className="outline-none w-full px-3 py-1"
-            placeholder="Password"
-            readOnly
-            ref={passwordRef}
-          />
-          <button
-            onClick={copyPasswordToClipboard}
-            className="outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0 cursor-pointer"
-          >
-            copy
-          </button>
-        </div>
-        <div className="flex text-sm gap-x-2">
-          <div className="flex items-center gap-x-1">
+      <div className="grid place-items-center h-screen">
+        <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 text-orange-500 bg-gray-800">
+          <h1 className="text-white text-center text-2xl my-3">
+            Password Generator
+          </h1>
+          <div className="flex shadow rounded-lg overflow-hidden mb-4 bg-white">
             <input
-              type="range"
-              min={0}
-              max={100}
-              value={length}
-              className="cursor-pointer"
-              onChange={(e) => {
-                setLength(e.target.value);
-              }}
+              type="text"
+              value={password}
+              className="outline-none w-full px-3 py-1"
+              placeholder="Password"
+              readOnly
+              ref={passwordRef}
             />
-            <label>Length: {length}</label>
+            <button
+              onClick={copyPasswordToClipboard}
+              className="outline-none bg-blue-700 text-white hover:bg-blue-900 px-3 py-0.5 shrink-0 cursor-pointer"
+            >
+              copy
+            </button>
           </div>
-          <div className="flex items-center gap-x-1">
-            <input
-              type="checkbox"
-              defaultChecked={numAllowed}
-              id="numInput"
-              onChange={() => {
-                setNumAllowed((prev) => !prev);
-              }}
-            />
-            <label htmlFor="numInput">Numbers</label>
-          </div>
-          <div className="flex items-center gap-x-1">
-            <input
-              type="checkbox"
-              defaultChecked={charAllowed}
-              id="charInput"
-              onChange={() => {
-                setCharAllowed((prev) => !prev);
-              }}
-            />
-            <label htmlFor="charInput">Characters</label>
+          <div className="flex text-sm gap-x-2">
+            <div className="flex items-center gap-x-1">
+              <input
+                type="range"
+                min={0}
+                max={100}
+                value={length}
+                className="cursor-pointer"
+                onChange={(e) => {
+                  setLength(e.target.value);
+                }}
+              />
+              <label>Length: {length}</label>
+            </div>
+            <div className="flex items-center gap-x-1">
+              <input
+                type="checkbox"
+                defaultChecked={numAllowed}
+                id="numInput"
+                onChange={() => {
+                  setNumAllowed((prev) => !prev);
+                }}
+              />
+              <label htmlFor="numInput">Numbers</label>
+            </div>
+            <div className="flex items-center gap-x-1">
+              <input
+                type="checkbox"
+                defaultChecked={charAllowed}
+                id="charInput"
+                onChange={() => {
+                  setCharAllowed((prev) => !prev);
+                }}
+              />
+              <label htmlFor="charInput">Characters</label>
+            </div>
           </div>
         </div>
       </div>
